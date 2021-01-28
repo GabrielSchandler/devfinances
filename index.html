@@ -41,7 +41,9 @@
 		<section id="transaction">
 			<h2 class="sr-only">Transações</h2>
 
-			<a href="#" class="butoon new">+Nova transação</a>
+			<a href="#"
+			onclick="Modal.open()"
+			class="butoon new">+Nova transação</a>
 
 			<table id="data-table">
 			
@@ -86,7 +88,7 @@
 		</section>
 	</main>
 
-	<div class="modal-overlay active">
+	<div class="modal-overlay ">
 		<div class="modal">
 			
 			<div class="form">
@@ -108,14 +110,30 @@
 						<label class="sr-only" for="amount">Descrição</label>
 						<input 
 							type="number" 
+							step="0.01"
 							id="amount" 
 							name="amount"
-							placeholder="Descrição"
+							placeholder="0,00,"
 						/>
-
+						<small class="help">Use o sinal de - {negativo} para despesas e , {virgula para casas decimais. </small>
 
 					</div>
 
+					<div class="input-group">
+						<label class="sr-only" for="date">Data</label>
+						<input 
+							type="date" 
+							id="date" 
+							name="date"
+						>
+					</div>
+
+					<div class="imput-group actions">
+						<a href="#" 
+						onclick="Modal.close()"
+						class="button cancel">Cancelar</a>
+						<button>Salvar</button>
+					</div>
 				</form>
 			</div>
 			
@@ -126,5 +144,32 @@
 	<footer>
 		<p>dev.finance$</p>
 	</footer>
+
+	
+	<script>
+		
+		const Modal = {
+			open(){
+				// Abrir modal
+				// Adicionar a classe active ao modal  
+				document
+					.querySelector('.modal-overlay')
+					.classList
+					.add('active')
+			},
+			close () {
+				// fechar o Modal
+				// Remover a classe Modal
+				document
+					.querySelector('.modal-overlay')
+					.classList
+					.remove('active')
+			}
+
+		}
+
+
+
+	</script>
 </body>
 </html>
