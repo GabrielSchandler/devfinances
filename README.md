@@ -5,6 +5,11 @@ UI for a personal finance tracker, built as an HTML, CSS and JavaScript learning
 
 [🇧🇷 Português](#-português) · [🇺🇸 English](#-english)
 
+<p align="center">
+  <img src="docs/screenshot-desktop.jpg" alt="Página inicial / Home page — desktop" width="76%">
+  <img src="docs/screenshot-mobile.jpg" alt="Página inicial / Home page — mobile" width="20%">
+</p>
+
 ---
 
 ## 🇧🇷 Português
